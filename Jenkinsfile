@@ -5,6 +5,10 @@ pipeline {
         jdk 'jdk8'
     }
 
+    triggers {
+        githubPush()
+    }
+
     stages {
         stage('Build') {
             steps {
